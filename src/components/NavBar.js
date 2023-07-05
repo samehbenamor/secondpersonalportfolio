@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
+import { motion, useViewportScroll  } from "framer-motion";
 import { useState, useEffect } from "react";
 import logo from '../assets/img/logo.svg';
 import logo2 from '../assets/img/logo2.svg';
 export const NavBar = () => {
-    
+    const { scrollY } = useViewportScroll();
     const [activeLink, setActiveLink] = useState('home'); // home, skills, projects, contact
     const [scrolled, seScrolled] = useState(false);
     
@@ -29,7 +29,8 @@ export const NavBar = () => {
     }
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""} >
+    
+    <Navbar fixed="top"  expand="lg" className={scrolled ? "scrolled" : ""} >
       <Container>
         <Navbar.Brand href="#home">
           <div className="image-stack">
@@ -51,12 +52,18 @@ export const NavBar = () => {
           
             <Nav.Link href="#home"  className={activeLink === 'home' ? 'active navbar-link ' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
             <Nav.Link href="#work" className={activeLink === 'work' ? 'active navbar-link ' : 'navbar-link '} onClick={() => onUpdateActiveLink('work')}>Work</Nav.Link>
-            <Nav.Link href="#service" className={activeLink === 'service' ? 'active navbar-link text-secondary' : 'navbar-link text-white'} onClick={() => onUpdateActiveLink('service')}>Service</Nav.Link>
+            <Nav.Link href="#service" className={activeLink === 'service' ? 'active navbar-link ' : 'navbar-link'} onClick={() => onUpdateActiveLink('service')}>Service</Nav.Link>
            
           </Nav>
           <span className="navbar-text ">
-            
-            <button className='vvd ' onClick={() => console.log("connect")}><span>Contact me</span></button>
+          <motion.button
+      style={{
+        opacity: scrollY.get() > 50 ? 0 : 1,
+        transition: 'opacity 0.3s ease',
+      }}
+    >
+          <span>Contact me</span>
+            </motion.button>
         </span>
         </Navbar.Collapse>
       </Container>

@@ -110,7 +110,7 @@ nav.navbar {
   position: fixed;
   display: flex;
   justify-content: center;
-  
+
   width: 100%;
   top: 0;
   z-index: 9999;
@@ -157,7 +157,24 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #121212;
+  background-color: #252526;
+  transition:  0.5s ease-in-out;
+  .whoami {
+    transition: 0.5s ease-in-out;
+    padding-left: 500px;
+    margin-left: 50px;
+  }
+  .nav-link.navbar-link {
+    transition: 0.7s ease-in-out;
+    margin-top: -200px;
+  }
+  .navbar-text button {
+  overflow: hidden;
+  }
+  .img2, .img1 {
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+  }
 }
 
 
@@ -385,4 +402,102 @@ nav.navbar .navbar-toggler:focus {
     /* Set color 1 */
     background-color: #cc3f0c;
   }
+}
+.underscore-word {
+  position: relative;
+  display: inline-block;
+  
+  cursor: default;
+  
+}
+.underscore-word::after {
+  content: "";
+  position: absolute;
+  margin-top: -10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+.theamountofdetail {
+  color: red;
+
+}
+.underscore-word:hover::after {
+  transform: scaleX(1);
+}
+.shouldbegood {
+  color: red;
+}
+/* Sliding strip, really bad code here and in react */
+
+.long-rectangle {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  background-color: #cc3f0c;
+  margin-top: -68px;
+  display: flex;
+  align-items: center;
+}
+
+.text-motion-container {
+  /*display: flex;
+  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sliding-text {
+  position: relative;
+  transform: translateY(-100%);
+  font-family: 'TiemposHeadline', monospace !important;
+  font-weight: 900;
+  color: black;
+  font-size: 24px;
+  white-space: nowrap;
+}
+/* Work  */
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+  
+  /*background-color: #79a9d1;*/
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin: 169px 0 169px 0;
+}
+.skill h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
+.skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
 }
