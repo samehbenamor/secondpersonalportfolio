@@ -1,7 +1,7 @@
 @font-face {
   font-family: JetBrainsMono;
   src: url(./assets/fonts/JetBrainsMono-Regular.ttf);
-  font-weight: 700;
+  font-weight: 400;
 }
 @font-face {
   font-family: JetBrainsMono;
@@ -25,6 +25,23 @@
 }
 
 
+@font-face {
+  font-family: TiemposHeadline;
+  src: url(./assets/fonts/TiemposHeadline-Black.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: TiemposHeadline;
+  src: url(./assets/fonts/TiemposHeadline-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: TiemposHeadline;
+  src: url(./assets/fonts/TiemposHeadline-Regular.otf);
+  font-weight: 400;
+}
 
 
 * {
@@ -102,7 +119,7 @@ nav.navbar {
 nav.navbar a.navbar-brand  {
   cursor: default;
   width: 6%;
-
+  
 }
 .img2 {
   transform: translate(-100%, 0%);
@@ -220,3 +237,87 @@ nav.navbar .navbar-toggler:focus {
     box-shadow: none;
 }
 
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  animation: blink 1s infinite;
+  margin-left: 5px;
+}
+
+
+/* Banner */
+
+.banner {
+  margin-top: 0;
+  padding: 120px 0 100px 0;
+  /*background-image: url('./assets/img/banner-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+}
+.mainbannerimg {
+  padding: 30px 0 30px 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 100px;
+}
+/* Line height is essentially font size * 1.2 */
+/* Line height is essentially font size * 1.2 */
+.nameandlastname {
+  font-family: 'TiemposHeadline', monospace !important;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -0.05em;
+  text-align: start;
+
+}
+.introduction {
+  font-family: 'TiemposHeadline', monospace !important;
+  font-weight: 400;
+  padding-top: 8px;
+  letter-spacing: -0.2px;
+  font-size: 18px;
+  text-align: start;
+  line-height: 20px;
+  word-wrap: break-word;
+
+
+}
+
+.myphoto {
+  width: auto;
+  height: 600px;
+  margin-top: -448px;
+  margin-left: 120px;
+}
+ 
+
+.lift {
+  margin-top: 150px;
+}
+
+.currently {
+  font-family: 'TiemposHeadline', monospace !important;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+  text-align: start;
+  
+  margin-left: 1000px;
+  margin-top: -320px;
+}
+
+.gridsystemconfusing {
+  margin-top: -200px;
+}

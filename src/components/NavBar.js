@@ -35,10 +35,11 @@ export const NavBar = () => {
           <div className="image-stack">
             <img src={logo} className="img1"/>
             <img src={logo2} className="img2"/>
+
             </div>
         </Navbar.Brand>
         <Navbar.Text className="whoami col">
-            samehbenamor
+            samehbenamor<span className="blinking-cursor"></span>
         </Navbar.Text>
         <Navbar.Toggle aria-controls="basic-navbar-nav" >
         <span className='navbar-toggler-icon'>
