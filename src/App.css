@@ -144,7 +144,7 @@ span.navbar-text {
   text-align: center;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 100px;
+  font-weight: 400px;
   
   letter-spacing: 1px;
   padding: 0 50px 15px;
@@ -156,19 +156,22 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 }
 
 nav.navbar.scrolled {
+  
   padding: 0px 0;
   background-color: #252526;
   transition:  0.5s ease-in-out;
   .whoami {
-    transition: 0.5s ease-in-out;
     padding-left: 500px;
     margin-left: 50px;
+    transition: 0.5s ease-in-out;
+    
   }
   .nav-link.navbar-link {
     transition: 0.7s ease-in-out;
     margin-top: -200px;
   }
   .navbar-text button {
+    transition: 0.5s ease-in-out;
   overflow: hidden;
   }
   .img2, .img1 {
@@ -186,6 +189,9 @@ nav.navbar.scrolled {
   font-weight: 700;
   cursor: default;
   letter-spacing: -0.80px;
+  
+  transition: 0.5s ease-out;
+  
 }
 nav.navbar .nav-link.navbar-link {
   
@@ -468,17 +474,62 @@ nav.navbar .navbar-toggler:focus {
   font-size: 24px;
   white-space: nowrap;
 }
-/* Work  */
+/*  //////////////Work/////////////  */
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  
-  /*background-color: #79a9d1;*/
+
 }
+.past {
+
+}
+Table.projectsTable {
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+Table.projectsTable td {
+  
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+
+  color: #fff;
+  background-color: #252526;
+}
+
+.cursor-image {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5000;
+  transition: transform 0.3s ease;
+}
+
+.cursor-image img {
+  width: 500px;
+  height: 222px; /* Adjust the size as per your preference */
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.hoverable-tr {
+  position: relative;
+  border-bottom: 1px solid white;
+  border-Top: 1px solid white;
+}
+
+.hoverable-tr:hover .cursor-image {
+  display: block;
+}
+
+.hoverable-tr:hover td {
+  /* Add any styling for the hovered row */
+}
+
 .skill-bx {
-  background: #151515;
+  background: #252526;
   border-radius: 64px;
-  text-align: center;
+  text-align: left;
   padding: 60px 50px;
   margin: 169px 0 169px 0;
 }

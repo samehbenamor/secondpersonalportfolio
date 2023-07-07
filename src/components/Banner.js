@@ -24,6 +24,7 @@ export const Banner = () => {
 
     return <span>{currentText}</span>;
   };
+  
   return (
     <section className="banner">
       <motion.div>
