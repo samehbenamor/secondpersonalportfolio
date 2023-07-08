@@ -476,13 +476,11 @@ nav.navbar .navbar-toggler:focus {
 }
 /*  //////////////Work/////////////  */
 .skill {
-  padding: 0 0 50px 0;
+
   position: relative;
-
+  height: 100vh;
 }
-.past {
 
-}
 Table.projectsTable {
   border-collapse: collapse;
   margin-top: 50px;
@@ -491,7 +489,7 @@ Table.projectsTable td {
   
   padding: 15px;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 
   color: #fff;
@@ -530,6 +528,7 @@ Table.projectsTable td {
   background: #252526;
   border-radius: 64px;
   text-align: left;
+  
   padding: 60px 50px;
   margin: 169px 0 169px 0;
 }
@@ -551,4 +550,58 @@ Table.projectsTable td {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+
+/* Footer  */
+.Footer {
+  
+  background-color: #252526;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 9999;
+
+  font-family: 'TiemposHeadline', monospace !important;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontally center content */
+  justify-content: center; /* vertically center content */
+}
+
+
+
+.Footer h1 {
+  letter-spacing: -0.80px;
+  font-size: 44px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.Footer button {
+  letter-spacing: -0.80px;
+  font-size: 28px;
+  font-weight: 400;
+  display: block;
+  margin: 20px auto; 
+  margin-top: 20px;/* horizontally center the button */
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 4px 34px;
+  border-radius: 9999px;
+}
+
+.social-icons {
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }

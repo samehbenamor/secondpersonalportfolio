@@ -7,6 +7,26 @@ import ggaming from "../assets/img/ggaming.PNG";
 import { motion } from "framer-motion";
 import React from "react";
 export const Work = () => {
+
+  const Typewriter = ({ text, delay }) => {
+    const [currentText, setCurrentText] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+      if (currentIndex < text.length) {
+        const timeout = setTimeout(() => {
+          setCurrentText((prevText) => prevText + text[currentIndex]);
+          setCurrentIndex((prevIndex) => prevIndex + 1);
+        }, delay);
+
+        return () => clearTimeout(timeout);
+      }
+    }, [currentIndex, delay, text]);
+
+    return <span>{currentText}</span>;
+  };
+
+
   const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
   const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
@@ -127,12 +147,14 @@ export const Work = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
+              <motion.div
+              
+              
+              >
               <h2 className="past">Past Projects</h2>
-              <p hidden>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
-              </p>
+              </motion.div>
+              
+              
               <Table className="projectsTable">
                 <thead>
                   <tr
@@ -171,4 +193,5 @@ export const Work = () => {
       <img className="background-image-left" src={""} alt="Image" />
     </section>
   );
-};
+}
+
