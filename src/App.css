@@ -491,7 +491,7 @@ Table.projectsTable td {
   text-align: left;
   font-size: 20px;
   font-weight: 400;
-
+  
   color: #fff;
   background-color: #252526;
 }
@@ -529,27 +529,19 @@ Table.projectsTable td {
   border-radius: 64px;
   text-align: left;
   
-  padding: 60px 50px;
-  margin: 169px 0 169px 0;
+  padding: 65px;
+  margin: 169px 0 50px 0;
 }
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
 .skill p {
-    color: #B8B8B8;
+    color: White;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
-}
-
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
 }
 
 
