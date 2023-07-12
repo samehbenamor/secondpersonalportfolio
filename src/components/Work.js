@@ -206,7 +206,7 @@ export const Work = () => {
                   >
                     <motion.td variants={tdVariants}>2022</motion.td>
                     <motion.td variants={tdVariants}>Smart TechStore</motion.td>
-                    <motion.td variants={tdVariants}>Studies project</motion.td>
+                    <motion.td variants={tdVariants}></motion.td>
                     <motion.td variants={tdVariants}>Qt, c++</motion.td>
                     <motion.td variants={tdVariants}>Desktop app</motion.td>
                   </motion.tr>
